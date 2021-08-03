@@ -1,0 +1,48 @@
+{% extends "network/layout.html" %}
+{% load static %}
+{% block body %}
+    <div class="main" id="allposts">
+        <h2>All Posts</h2>
+        <div id="newpost" class="card">
+            <form id="postform">
+                <h4>New Post</h4>
+                <textarea name="form" id="postbody"></textarea>
+                <input type="submit" value="Post">
+            </form>
+        </div>
+        <div id="cards"></div>
+        <nav >
+            <ul id="pagination-allposts" class="pagination">
+            </ul>
+        </nav>
+    </div>
+    <div class="main" id="allposts-following">
+        <h2>Following</h2>
+        <div id="cards-following">
+        </div>
+        <nav >
+            <ul id="pagination-allposts-following" class="pagination">
+            </ul>
+        </nav>
+    </div>
+    <div class="main" id="perfil">
+        <div style="display: flex; align-items: center; flex-direction: column;">
+            <h1 id="perfil-username">Username</h1>
+            <button id="perfil-follow" class="btn btn-sm btn-outline-primary">Follow/Unfollow</button>
+            <div style="display: flex; align-items: center;"> 
+                <span id="perfil-followers">100 followers</span>
+                <span id="perfil-followings">100 following</span>
+            </div>
+        </div>
+        <div id="cards-perfil"></div>
+        <nav >
+            <ul id="pagination-perfil" class="pagination">
+            </ul>
+          </nav>
+    </div>
+{% endblock %}
+
+
+{% block script %}
+    <script src="{% static 'network/allPosts.js' %}"></script>
+{% endblock %}

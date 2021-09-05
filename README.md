@@ -1,4 +1,4 @@
-# CS50 Harvard - Project Network
+# My Network
 
 <img src="exemple.PNG" alt="Demo">
 
